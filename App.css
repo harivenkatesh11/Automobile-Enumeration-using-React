@@ -1,0 +1,149 @@
+.App {
+  text-align: center;
+  background-color: rgba(64, 69, 156, 0.235); 
+  background-position: 100px;
+  margin: 10px;
+}
+.parking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.left-side,
+.right-side {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slot-container {
+  column-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  transform: translate();
+}
+.slot {
+  border-radius: 200px;
+  width: 120px; /* Width of the rectangle slots */
+  height: 60px; /* Height of the rectangle slots */
+  border: 2px solid #000;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.occupied {
+  background-color: red;
+  color: rgb(0, 0, 0);
+}
+.vacant {
+  background-color: green;
+  color: rgb(0, 0, 0);
+}
+.container {
+  max-width: 350px;
+  max-height:250px;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+  padding: 190px;
+  background-color:transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(205, 62, 62, 0.1);
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpvRbBR2FZS8FBN580hhX-LfHoliGhEehJtA&s');
+  background-size: cover; 
+  background-position: center; 
+}
+.title {
+  text-align: center;
+  font-weight: bolder;
+  font-style: oblique;
+  font-size: 50px;
+  margin: -115px;
+  margin-bottom: 2px;
+}
+.subheading {
+  text-align: center;
+  font-size: 50px;
+  margin: 2px;
+  margin-top: 1px;
+  position: absolute;
+  top: 100px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.block {
+  background-color: transparent;
+  font-size: larger;
+  font-weight: bolder;
+  font-style: oblique;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.name-box {
+  background-color: transparent;
+  font-size: larger;
+  font-weight: bolder;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.floor-container {
+  display: flex;
+  flex-direction: column;
+}
+.floor-container .name-box {
+  display: flex;
+  align-items: center;
+} 
+.floor-container .name-box button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.floor-container .name-box button:hover {
+  background-color: #000000;
+}
+.floors-button{
+background-color: skyblue;
+font-size: 20px;
+cursor: pointer;
+padding: 10px 20px;
+font-weight: bolder;
+}
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  font-size: 16px; 
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.next-button {
+  position: absolute;
+  top: 10px; 
+  right: 20px; 
+  color: #fff;
+  background-color: #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.floor{
+  margin: 60px;
+}

@@ -1,0 +1,116 @@
+import React, { useState } from 'react';
+import './AutomobileEnumerationButton.css';
+import carImage from './carImage.jpg'; 
+
+const AutomobileEnumerationButton = () => {
+  const [showLoginPage, setShowLoginPage] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowLoginPage(true);
+  };
+
+  return (
+    <div className="button-container">
+      {showLoginPage ? (
+        <div className="login-page" style={{ backgroundImage: `url(${carImage})` }}>
+          <h2>Login</h2>
+          <form>
+            <div>
+              <label htmlFor="username">Username:</label>
+              <input type="text" id="username" name="username" />
+            </div>
+            <div>
+              <label htmlFor="password">Password:</label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      ) : (
+        <div className="button-with-image">
+          <button className="automobile-enumeration-button" onClick={handleButtonClick}>
+            Automobile Enumeration
+          </button>
+          <img src={carImage} alt="Car" className="car-image" />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default AutomobileEnumerationButton;
+
+
+
+button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+.button-with-image {
+  position: relative;
+}
+.automobile-enumeration-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color:transparent;
+  color: black;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.car-image {
+  width: 100%;
+  height: auto;
+}
+.login-page {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-page form {
+  display: flex;
+  flex-direction: column;
+}
+.login-page label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.login-page input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-page button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-page button:hover {
+  background-color: #0056b3;
+}

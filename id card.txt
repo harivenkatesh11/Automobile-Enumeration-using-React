@@ -1,0 +1,16 @@
+
+let name="B.DINESH"
+let   id="2200100040"
+let barnch="internet of things"
+let university="kl university"
+export default function myapp(){
+return (
+<div>
+<img src='./dinesh.jpg' alt='dinesh' width='400' height='250'/>
+<h1>NAME:{name}</h1>
+<h1>ID NUMBER:{2200100040}</h1>
+<h1>DEPARTMENT Of: {barnch} </h1>
+<h1>UNIVERSITY:{university}</h1>
+</div>
+);
+}

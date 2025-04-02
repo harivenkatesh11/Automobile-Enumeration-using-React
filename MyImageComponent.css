@@ -1,0 +1,13 @@
+/* MyImageComponent.css */
+
+.image-container {
+    text-align: center;
+  }
+  
+  .car-image {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add border radius if desired */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Add shadow for styling */
+  }
+  
